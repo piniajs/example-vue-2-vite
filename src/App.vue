@@ -1,27 +1,90 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <div id="app">
+    <h3>
+      Pinia + <a href="https://github.com/posva/vue-promised">Vue Promised</a>
+    </h3>
+
+    <main>
+      <section>
+        <button
+          :disabled="state !== 'ready'"
+          @click="fetchRandomJoke"
+          style="margin-bottom: 4px"
+        >
+          {{ buttonText }}
+        </button>
+
+        <div style="min-height: 9rem" v-if="jokes.current">
+          <blockquote :key="jokes.current.id">
+            <i>{{ jokes.current.setup }}</i>
+            <br />
+            <br />
+            <p class="appear" @animationend="state = 'ready'">
+              {{ jokes.current.punchline }}
+            </p>
+          </blockquote>
+        </div>
+      </section>
+    </main>
+
+    <pre>{{ jokes.$state }}</pre>
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+import { computed, onMounted, ref, defineComponent } from '@vue/composition-api'
+import { useJokes } from './stores/jokes'
 
 export default defineComponent({
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  setup() {
+    const jokes = useJokes()
+    // const jokes = useJokesSetup()
+
+    const texts = {
+      loading: 'Fetching the joke...',
+      waiting: 'Wait for it...',
+      ready: 'Another one?',
+    }
+
+    const state = ref<'waiting' | 'loading' | 'ready'>('waiting')
+
+    const buttonText = computed(() => texts[state.value])
+
+    function fetchRandomJoke() {
+      state.value = 'loading'
+
+      jokes.fetchJoke().finally(() => {
+        state.value = 'waiting'
+        console.log('done fetching', jokes.current)
+      })
+    }
+
+    onMounted(() => {
+      console.log('mounted')
+      // @ts-expect-error
+      window.jo = jokes
+      console.log('new pending')
+      fetchRandomJoke()
+    })
+
+    return { jokes, buttonText, state, fetchRandomJoke }
+  },
 })
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.appear {
+  opacity: 0;
+  animation: appear 1s ease-in-out 3s;
+  animation-fill-mode: forwards;
 }
 </style>
