@@ -1,0 +1,21 @@
+{
+  "name": "pinia-vue-2",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@vue/composition-api": "^1.1.0-beta.5",
+    "pinia": "/Users/posva/pinia/pinia-v2.0.0-rc.1.tgz",
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.2",
+    "vite": "^2.4.4",
+    "vite-plugin-vue2": "^1.7.3",
+    "vue-template-compiler": "^2.6.14"
+  }
+}
