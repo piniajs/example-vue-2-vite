@@ -352,7 +352,7 @@
   optionalDependencies:
     prettier "^1.18.2"
 
-"@vue/composition-api@^1.1.0-beta.5":
+"@vue/composition-api@^1.1.0-0":
   version "1.1.0-beta.5"
   resolved "https://registry.yarnpkg.com/@vue/composition-api/-/composition-api-1.1.0-beta.5.tgz#f27076c1867e4da0ed21661cd0e091a8c73ee51d"
   integrity sha512-OA70Fwh4yXXZCrc1vJimvXh+O6jG8IPv7bJ+kMwLPejHWLXqhA06vBufbwucnj42qp/yTTsh02xvG+XHIrIGZA==
@@ -1196,9 +1196,10 @@ picomatch@^2.2.2:
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.0.tgz#f1f061de8f6a4bf022892e2d128234fb98302972"
   integrity sha512-lY1Q/PiJGC2zOv/z391WOTD+Z02bCgsFfvxoXXf6h7kv9o+WmsmzYqrAwY63sNgOxE4xEdq0WyUnXfKeBrSvYw==
 
-pinia@/Users/posva/pinia/pinia-v2.0.0-rc.1.tgz:
-  version "2.0.0-rc.1"
-  resolved "/Users/posva/pinia/pinia-v2.0.0-rc.1.tgz#7ed664c2df993e1f62e9e4209bbaaef0dbe94c2c"
+pinia@^2.0.0-rc.2:
+  version "2.0.0-rc.2"
+  resolved "https://registry.yarnpkg.com/pinia/-/pinia-2.0.0-rc.2.tgz#88b27398f7298a0318388f72ef1e1f7525901a03"
+  integrity sha512-rIX3o3dE/sSH9bUqqHI2joEFyWXep7FP2zaxwSvlR6t4Gx2vUh9jk+mxJsjfdyQdlnbgMk+g/hLUziez9geKjA==
   dependencies:
     "@vue/devtools-api" "^6.0.0-beta.15"
     vue-demi latest

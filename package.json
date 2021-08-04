@@ -8,9 +8,9 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@vue/composition-api": "^1.1.0-beta.5",
+    "@vue/composition-api": "^1.1.0-0",
     "mande": "^1.0.0",
-    "pinia": "/Users/posva/pinia/pinia-v2.0.0-rc.1.tgz",
+    "pinia": "^2.0.0-rc.2",
     "vue": "^2.6.14"
   },
   "devDependencies": {

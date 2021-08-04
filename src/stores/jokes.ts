@@ -1,39 +1,16 @@
-import { reactive, ref, toRaw, toRefs, unref } from '@vue/composition-api'
+import { ref, toRaw, unref } from '@vue/composition-api'
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { getRandomJoke, Joke } from '../api/jokes'
-
-const state = ref({
-  items: [{ id: 0 }],
-  current: { id: 1 },
-})
-
-const store = reactive({
-  ...toRefs(state.value),
-  change() {
-    this.items.push(this.current)
-    this.current = { id: this.current.id + 1 }
-  },
-})
-
-store.change()
-store.change()
-store.change()
-
-// store.items.push(store.current)
-// store.current = { id: 2 }
-
-console.log(JSON.stringify(toRaw(store), null, 2))
 
 export const useJokes = defineStore('jokes', {
   state: () => ({
     current: null as null | Joke,
     jokes: [] as Joke[],
-    // hey: true,
   }),
   actions: {
     async fetchJoke() {
       if (
-        this.$state.current &&
+        this.current &&
         // if the request below fails, avoid adding it twice
         !this.jokes.find((joke) => this.current!.id === joke.id)
       ) {
@@ -68,6 +45,6 @@ export const useJokesSetup = defineStore('jokes-setup', () => {
 })
 
 if (import.meta.hot) {
-  import.meta.hot.accept(acceptHMRUpdate(useJokes, import.meta.hot))
-  // import.meta.hot.accept(acceptHMRUpdate(useJokesSetup, import.meta.hot))
+  // import.meta.hot.accept(acceptHMRUpdate(useJokes, import.meta.hot))
+  import.meta.hot.accept(acceptHMRUpdate(useJokesSetup, import.meta.hot))
 }

@@ -31,6 +31,7 @@
 
 <script lang="ts">
 import { computed, onMounted, ref, defineComponent } from '@vue/composition-api'
+// import { useJokesSetup as useJokes } from './stores/jokes'
 import { useJokes } from './stores/jokes'
 
 export default defineComponent({
