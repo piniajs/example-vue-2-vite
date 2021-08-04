@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <h3>
-      Pinia + <a href="https://github.com/posva/vue-promised">Vue Promised</a>
-    </h3>
+    <h3>Dad Jokes</h3>
 
     <main>
       <section>
@@ -60,10 +58,6 @@ export default defineComponent({
     }
 
     onMounted(() => {
-      console.log('mounted')
-      // @ts-expect-error
-      window.jo = jokes
-      console.log('new pending')
       fetchRandomJoke()
     })
 

@@ -1,4 +1,12 @@
-import { createApp } from 'vue'
+import Vue from 'vue'
 import App from './App.vue'
+import { createPinia, PiniaPlugin } from 'pinia'
 
-createApp(App).mount('#app')
+const pinia = createPinia()
+
+Vue.use(PiniaPlugin)
+new Vue({
+  // @ts-expect-error
+  pinia,
+  render: (h) => h(App),
+}).$mount('#app')
