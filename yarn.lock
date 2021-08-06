@@ -248,6 +248,11 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
+"@pinia/plugin-debounce@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@pinia/plugin-debounce/-/plugin-debounce-0.0.2.tgz#3913f536f4e02609d91f80db8af31ed2a1db8ac5"
+  integrity sha512-yz9AK90R+Xxf4S2MzasgCrAieOuX/9A6eklNV/hO5QrjFB2Dqzc+w0Twcp1wPhtG4wliMPP3ctzBGKFo3w8qtw==
+
 "@rollup/pluginutils@^4.1.0":
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-4.1.1.tgz#1d4da86dd4eded15656a57d933fda2b9a08d47ec"
@@ -1395,6 +1400,11 @@ to-fast-properties@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
   integrity sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=
+
+ts-debounce@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/ts-debounce/-/ts-debounce-3.0.0.tgz#9beedf59c04de3b5bef8ff28bd6885624df357be"
+  integrity sha512-7jiRWgN4/8IdvCxbIwnwg2W0bbYFBH6BxFqBjMKk442t7+liF2Z1H6AUCcl8e/pD93GjPru+axeiJwFmRww1WQ==
 
 tslib@^2.3.0:
   version "2.3.0"

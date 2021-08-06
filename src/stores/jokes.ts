@@ -21,6 +21,10 @@ export const useJokes = defineStore('jokes', {
       // this.$patch({ current: await getRandomJoke() })
     },
   },
+
+  debounce: {
+    fetchJoke: 0,
+  },
 })
 
 export const useJokesSetup = defineStore('jokes-setup', () => {
