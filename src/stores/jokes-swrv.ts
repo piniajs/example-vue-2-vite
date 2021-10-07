@@ -1,5 +1,5 @@
-import { ref, toRaw, unref, watch } from 'vue'
-import { acceptHMRUpdate, defineStore } from '../../../src'
+import { ref, toRaw, unref, watch } from '@vue/composition-api'
+import { acceptHMRUpdate, defineStore } from 'pinia'
 import { getRandomJoke, Joke } from '../api/jokes'
 import useSWRV from 'swrv'
 

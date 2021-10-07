@@ -1,7 +1,7 @@
-import { acceptHMRUpdate, defineStore } from '../../../src'
+import { acceptHMRUpdate, defineStore } from 'pinia'
 import { getRandomJoke, Joke } from '../api/jokes'
 import { usePromise } from 'vue-promised'
-import { ref, watch } from 'vue'
+import { ref, watch } from '@vue/composition-api'
 
 export const useJokes = defineStore({
   id: 'jokes-vue-promised',

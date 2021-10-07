@@ -1,6 +1,6 @@
 import useSWRV from 'swrv'
-import { computed, ref } from 'vue'
-import { acceptHMRUpdate, defineStore } from '../../../src'
+import { computed, ref } from '@vue/composition-api'
+import { acceptHMRUpdate, defineStore } from 'pinia'
 import { getNASAPOD } from '../api/nasa'
 
 import LocalStorageCache from 'swrv/dist/cache/adapters/localStorage'
