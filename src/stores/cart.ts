@@ -5,6 +5,7 @@ export const useCartStore = defineStore({
   id: 'cart',
   state: () => ({
     rawItems: [] as string[],
+    loading: false,
   }),
   getters: {
     items: (state) =>

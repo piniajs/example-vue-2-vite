@@ -33,11 +33,16 @@
 import { computed, onMounted, ref, defineComponent } from '@vue/composition-api'
 // import { useJokesSetup as useJokes } from './stores/jokes'
 import { useJokes } from './stores/jokes'
+import { useCartStore } from './stores/cart'
+import { storeToRefs } from 'pinia'
 
 export default defineComponent({
   setup() {
     const jokes = useJokes()
     // const jokes = useJokesSetup()
+
+    const cart = useCartStore()
+    const { loading } = storeToRefs(cart)
 
     const texts = {
       loading: 'Fetching the joke...',
