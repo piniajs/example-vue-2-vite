@@ -11,7 +11,7 @@
     "@pinia/plugin-debounce": "^0.0.2",
     "@vue/composition-api": "^1.2.0",
     "mande": "^1.0.0",
-    "pinia": "^2.0.0-rc.11",
+    "pinia": "^2.0.0-rc.15",
     "swrv": "^0.9.4",
     "ts-debounce": "^3.0.0",
     "vue": "^2.6.14",
