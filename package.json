@@ -13,7 +13,7 @@
     "mande": "^1.0.0",
     "pinia": "^2.0.0",
     "swrv": "^0.9.4",
-    "ts-debounce": "^3.0.0",
+    "ts-debounce": "^4.0.0",
     "vue": "^2.6.14",
     "vue-promised": "^2.1.0"
   },
