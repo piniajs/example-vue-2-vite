@@ -1,90 +1,95 @@
 <template>
-  <div id="app">
-    <h3>Dad Jokes</h3>
+  <div>
+    <div style="margin: 1rem 0;">
+      <PiniaLogo />
+    </div>
 
-    <main>
-      <section>
-        <button
-          :disabled="state !== 'ready'"
-          @click="fetchRandomJoke"
-          style="margin-bottom: 4px"
-        >
-          {{ buttonText }}
-        </button>
+    <h2>Hello {{ user.name }}</h2>
 
-        <div style="min-height: 9rem" v-if="jokes.current">
-          <blockquote :key="jokes.current.id">
-            <i>{{ jokes.current.setup }}</i>
-            <br />
-            <br />
-            <p class="appear" @animationend="state = 'ready'">
-              {{ jokes.current.punchline }}
-            </p>
-          </blockquote>
-        </div>
-      </section>
-    </main>
+    <form @submit.prevent="addItemToCart" data-testid="add-items">
+      <input type="text" v-model="itemName" />
+      <button>Add</button>
+    </form>
 
-    <pre>{{ jokes.$state }}</pre>
+    <form @submit.prevent="buy">
+      <ul data-testid="items">
+        <li v-for="item in cart.items" :key="item.name">
+          {{ item.name }} ({{ item.amount }})
+          <button
+            @click="cart.removeItem(item.name)"
+            type="button"
+          >X</button>
+        </li>
+      </ul>
+
+      <button :disabled="!user.name">Buy</button>
+      <button
+        :disabled="!cart.items.length"
+        @click="clearCart"
+        type="button"
+        data-testid="clear"
+      >Clear the cart</button>
+    </form>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, onMounted, ref, defineComponent } from '@vue/composition-api'
-// import { useJokesSetup as useJokes } from './stores/jokes'
-import { useJokes } from './stores/jokes'
+import PiniaLogo from './components/PiniaLogo.vue'
+
+import { defineComponent, ref } from 'vue-demi'
+import { useUserStore } from './stores/user'
 import { useCartStore } from './stores/cart'
-import { storeToRefs } from 'pinia'
 
 export default defineComponent({
+  components: { PiniaLogo },
+
   setup() {
-    const jokes = useJokes()
-    // const jokes = useJokesSetup()
-
+    const user = useUserStore()
     const cart = useCartStore()
-    const { loading } = storeToRefs(cart)
 
-    const texts = {
-      loading: 'Fetching the joke...',
-      waiting: 'Wait for it...',
-      ready: 'Another one?',
+    const itemName = ref('')
+
+    function addItemToCart() {
+      if (!itemName.value) return
+      cart.addItem(itemName.value)
+      itemName.value = ''
     }
 
-    const state = ref<'waiting' | 'loading' | 'ready'>('waiting')
-
-    const buttonText = computed(() => texts[state.value])
-
-    function fetchRandomJoke() {
-      state.value = 'loading'
-
-      jokes.fetchJoke().finally(() => {
-        state.value = 'waiting'
-        console.log('done fetching', jokes.current)
-      })
+    function clearCart() {
+      if (window.confirm('Are you sure you want to clear the cart?')) {
+        cart.rawItems = []
+      }
     }
 
-    onMounted(() => {
-      fetchRandomJoke()
-    })
+    async function buy() {
+      const n = await cart.purchaseItems()
 
-    return { jokes, buttonText, state, fetchRandomJoke }
+      console.log(`Bought ${n} items`)
+
+      cart.rawItems = []
+    }
+
+    return {
+      itemName,
+      addItemToCart,
+      cart,
+
+      user,
+      buy,
+      clearCart,
+    }
   },
 })
 </script>
 
-<style>
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+<style scoped>
+img {
+  width: 200px;
 }
 
-.appear {
-  opacity: 0;
-  animation: appear 1s ease-in-out 3s;
-  animation-fill-mode: forwards;
+button,
+input {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 </style>
