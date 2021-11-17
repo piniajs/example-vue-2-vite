@@ -305,11 +305,6 @@
     debug "^3.1.0"
     lodash.once "^4.1.1"
 
-"@pinia/plugin-debounce@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@pinia/plugin-debounce/-/plugin-debounce-0.0.2.tgz#3913f536f4e02609d91f80db8af31ed2a1db8ac5"
-  integrity sha512-yz9AK90R+Xxf4S2MzasgCrAieOuX/9A6eklNV/hO5QrjFB2Dqzc+w0Twcp1wPhtG4wliMPP3ctzBGKFo3w8qtw==
-
 "@rollup/pluginutils@^4.1.1":
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-4.1.1.tgz#1d4da86dd4eded15656a57d933fda2b9a08d47ec"
@@ -1982,11 +1977,6 @@ magic-string@^0.25.7:
   dependencies:
     sourcemap-codec "^1.4.4"
 
-mande@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/mande/-/mande-1.0.0.tgz#80f1faae62ebe9bebdd37093794d25de39ceafab"
-  integrity sha512-SKNhkHOvXXFOGCgOvqD9EUKDiNZFXvfACfED+Omw7dXTq/NmHJ83QhHte3wOIiQ7bwLh7F/uotJ2djqcN0JgpA==
-
 merge-source-map@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/merge-source-map/-/merge-source-map-1.1.0.tgz#2fdde7e6020939f70906a68f2d7ae685e4c8c646"
@@ -2480,18 +2470,6 @@ svg-tags@^1.0.0:
   resolved "https://registry.yarnpkg.com/svg-tags/-/svg-tags-1.0.0.tgz#58f71cee3bd519b59d4b2a843b6c7de64ac04764"
   integrity sha1-WPcc7jvVGbWdSyqEO2x95krAR2Q=
 
-swrv@^0.9.4:
-  version "0.9.4"
-  resolved "https://registry.yarnpkg.com/swrv/-/swrv-0.9.4.tgz#8c8d34aa321add1b821158c5b16acda91d166f59"
-  integrity sha512-1ztLWp4XAPLBAyl3jUvAoIjVcXUxEY5U/FyDyvpCcSB/9jemq6Ay3Gp+NpFBLT4DmPkNcO8aIjTfmxnSAp0r1A==
-  dependencies:
-    swrv "^1.0.0-beta.8"
-
-swrv@^1.0.0-beta.8:
-  version "1.0.0-beta.8"
-  resolved "https://registry.yarnpkg.com/swrv/-/swrv-1.0.0-beta.8.tgz#745723f5ca8a7a7e290e911cf7da34cecaf356d3"
-  integrity sha512-MsjaMOvZODfM0cess/HhbSrNbAotYinv4vzipLckKYBo/QmrvjNUPGZSRSqByXy/9AjrMRFWo0YanaVPbqADPQ==
-
 throttleit@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/throttleit/-/throttleit-1.0.0.tgz#9e785836daf46743145a5984b6268d828528ac6c"
@@ -2526,11 +2504,6 @@ tough-cookie@~2.5.0:
   dependencies:
     psl "^1.1.28"
     punycode "^2.1.1"
-
-ts-debounce@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/ts-debounce/-/ts-debounce-3.0.0.tgz#9beedf59c04de3b5bef8ff28bd6885624df357be"
-  integrity sha512-7jiRWgN4/8IdvCxbIwnwg2W0bbYFBH6BxFqBjMKk442t7+liF2Z1H6AUCcl8e/pD93GjPru+axeiJwFmRww1WQ==
 
 tslib@^2.3.1:
   version "2.3.1"
@@ -2647,17 +2620,10 @@ vite@^2.4.4:
   optionalDependencies:
     fsevents "~2.3.2"
 
-vue-demi@*, vue-demi@latest:
+vue-demi@*:
   version "0.12.1"
   resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.12.1.tgz#f7e18efbecffd11ab069d1472d7a06e319b4174c"
   integrity sha512-QL3ny+wX8c6Xm1/EZylbgzdoDolye+VpCXRhI2hug9dJTP3OUJ3lmiKN3CsVV3mOJKwFi0nsstbgob0vG7aoIw==
-
-vue-promised@^2.1.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/vue-promised/-/vue-promised-2.2.0.tgz#985793e5a1aebdbcf6bd24eef397176d1d57ca09"
-  integrity sha512-qjJOEs8MQSYIRcKiQhC7wzyy9uja/NNXS4ZeftXU6BpIQ6Ao24Gmx2mY9exmPLagv9PdrO9zUQ3yIXnoVaag4g==
-  dependencies:
-    vue-demi latest
 
 vue-template-compiler@^2.6.14:
   version "2.6.14"
