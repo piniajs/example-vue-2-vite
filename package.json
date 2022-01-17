@@ -9,15 +9,15 @@
     "test": "cypress run"
   },
   "dependencies": {
-    "@vue/composition-api": "^1.4.3",
+    "@vue/composition-api": "^1.4.4",
     "pinia": "^2.0.9",
     "vue": "^2.6.14"
   },
   "devDependencies": {
-    "cypress": "^9.2.0",
+    "cypress": "^9.2.1",
     "prettier": "^2.5.1",
     "typescript": "^4.5.4",
-    "vite": "^2.7.10",
+    "vite": "^2.7.12",
     "vite-plugin-vue2": "^1.9.2",
     "vue-template-compiler": "^2.6.14"
   }
