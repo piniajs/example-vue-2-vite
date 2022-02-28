@@ -9,7 +9,7 @@
     "test": "cypress run"
   },
   "dependencies": {
-    "@vue/composition-api": "^1.4.6",
+    "@vue/composition-api": "^1.4.9",
     "pinia": "^2.0.11",
     "vue": "^2.6.14"
   },
