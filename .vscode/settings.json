@@ -1,0 +1,4 @@
+{
+  "extensions.enabled": ["octref.vetur"],
+  "extensions.disabled": ["vue.volar", "vue.vscode-typescript-vue-plugin"]
+}

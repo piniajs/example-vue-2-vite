@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="margin: 1rem 0;">
+    <div style="margin: 1rem 0">
       <PiniaLogo />
     </div>
 
@@ -15,10 +15,7 @@
       <ul data-testid="items">
         <li v-for="item in cart.items" :key="item.name">
           {{ item.name }} ({{ item.amount }})
-          <button
-            @click="cart.removeItem(item.name)"
-            type="button"
-          >X</button>
+          <button @click="cart.removeItem(item.name)" type="button">X</button>
         </li>
       </ul>
 
@@ -28,7 +25,9 @@
         @click="clearCart"
         type="button"
         data-testid="clear"
-      >Clear the cart</button>
+      >
+        Clear the cart
+      </button>
     </form>
   </div>
 </template>
