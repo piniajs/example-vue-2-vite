@@ -35,7 +35,7 @@
 <script lang="ts">
 import PiniaLogo from './components/PiniaLogo.vue'
 
-import { defineComponent, ref } from 'vue-demi'
+import { defineComponent, ref } from 'vue'
 import { useUserStore } from './stores/user'
 import { useCartStore } from './stores/cart'
 

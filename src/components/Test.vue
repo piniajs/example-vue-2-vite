@@ -1,5 +1,5 @@
 <script>
-import { defineComponent } from '@vue/composition-api'
+import { defineComponent } from 'vue'
 import { mapStores, defineStore } from 'pinia'
 
 const useCounterStore = defineStore('counterStore', {

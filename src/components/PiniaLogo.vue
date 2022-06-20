@@ -197,13 +197,12 @@
 </template>
 
 <script lang="ts">
-import { onMounted, onUnmounted, ref, defineComponent } from 'vue-demi'
+import { onMounted, onUnmounted, ref, defineComponent } from 'vue'
 
 export default defineComponent({
   setup() {
     const blinking = ref<'open' | 'closed'>('open')
     const talking = ref<'open' | 'closed'>('closed')
-
 
     const blinkTimer = 100
     const talkRate = 120
@@ -255,12 +254,10 @@ export default defineComponent({
 
     return {
       blinking,
-      talking
+      talking,
     }
-
-  }
+  },
 })
-
 </script>
 
 <style>

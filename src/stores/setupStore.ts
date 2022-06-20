@@ -1,4 +1,4 @@
-import { ref } from '@vue/composition-api'
+import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useSetupStore = defineStore('setup-store', () => {
