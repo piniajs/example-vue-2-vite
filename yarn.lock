@@ -76,10 +76,10 @@
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue2/-/plugin-vue2-1.1.0.tgz#377614e3ab81908f0815159f7ab3345a256edefa"
   integrity sha512-+vRQoBIM/u1Cwm0osttUoEzHQevFpLqCmMYeOqfOJdLh0OCBNU8M38vu2zjluFqOJIqgbE54Ruhir6TJ+IlkLA==
 
-"@vue/compiler-sfc@2.7.0-beta.3":
-  version "2.7.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@vue/compiler-sfc/-/compiler-sfc-2.7.0-beta.3.tgz#1c78cc383f81edf06df1af03d517981bd77da649"
-  integrity sha512-oO+UwaL1LpxellKkiKcm3BfwQimJqKX4ozxurCKWZWqoCXCCSTdQJriOGFozk1h95U9pWvCa0rl/U4RlWprupw==
+"@vue/compiler-sfc@2.7.0-beta.6":
+  version "2.7.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@vue/compiler-sfc/-/compiler-sfc-2.7.0-beta.6.tgz#57ef77fefde5d9b66c0e905708da2c71656d0fda"
+  integrity sha512-SqblDAMB4ADlwDbNSbNQkREncaJyW3uu+j/GSOLnWF7+NfZ7BBkWHZT1vp2zg+uKmSATtMSP8z68Kwc+S3aXOg==
   dependencies:
     "@babel/parser" "^7.18.4"
     postcss "^8.4.14"
@@ -1351,12 +1351,12 @@ vue-demi@*, vue-demi@^0.13.1:
   resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.13.1.tgz#7604904c88be338418a10abbc94d5b8caa14cb8c"
   integrity sha512-xmkJ56koG3ptpLnpgmIzk9/4nFf4CqduSJbUM0OdPoU87NwRuZ6x49OLhjSa/fC15fV+5CbEnrxU4oyE022svg==
 
-vue@^2.7.0-beta.3:
-  version "2.7.0-beta.3"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.7.0-beta.3.tgz#4544ad14d4f6c38c1acc250f5ee28ea68f209804"
-  integrity sha512-q9a9RQ13HRws/GjUVUWMEBcKy3V96Z+szlHNsnsHSwNjBNh1gY+R68HA8FYinlWIcJxcOQEiIt23FamaXOmMwQ==
+vue@^2.7.0-beta.6:
+  version "2.7.0-beta.6"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.7.0-beta.6.tgz#78a29dde6ab6c0025e79290dc19b020e925b8906"
+  integrity sha512-qHBYfzMJBoSWJwmI4wZpFRsuDBlhqf/z4FMWpi/QHTmkcNdOlsFohp9m4x3UbwkCsctn6pQ5RVanwkh/FTVC9w==
   dependencies:
-    "@vue/compiler-sfc" "2.7.0-beta.3"
+    "@vue/compiler-sfc" "2.7.0-beta.6"
     csstype "^3.1.0"
 
 which@^2.0.1:
