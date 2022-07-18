@@ -9,9 +9,9 @@
     "test": "cypress run"
   },
   "dependencies": {
-    "pinia": "^2.0.14",
-    "vue": "^2.7.4",
-    "vue-demi": "^0.13.2"
+    "pinia": "^2.0.16",
+    "vue": "^2.7.7",
+    "vue-demi": "^0.13.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue2": "^1.1.2",
