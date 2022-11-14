@@ -10,14 +10,14 @@
   },
   "dependencies": {
     "pinia": "^2.0.23",
-    "vue": "^2.7.13",
+    "vue": "^2.7.14",
     "vue-demi": "^0.13.11"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue2": "^2.0.0",
+    "@vitejs/plugin-vue2": "^2.0.1",
     "cypress": "^10.11.0",
     "prettier": "^2.7.1",
     "typescript": "^4.8.4",
-    "vite": "^3.2.2"
+    "vite": "^3.2.3"
   }
 }
