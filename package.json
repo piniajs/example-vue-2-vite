@@ -9,14 +9,14 @@
     "test": "cypress run"
   },
   "dependencies": {
-    "pinia": "^2.0.28",
+    "pinia": "^2.0.29",
     "vue": "^2.7.14",
     "vue-demi": "^0.13.11"
   },
   "devDependencies": {
     "@vitejs/plugin-vue2": "^2.2.0",
     "cypress": "^12.3.0",
-    "prettier": "^2.8.2",
+    "prettier": "^2.8.3",
     "typescript": "^4.9.4",
     "vite": "^4.0.4"
   }
