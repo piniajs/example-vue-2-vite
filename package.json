@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "pinia": "^2.0.29",
-    "vue": "^2.7.14",
+    "vue": "^3.2.47",
     "vue-demi": "^0.13.11"
   },
   "devDependencies": {
