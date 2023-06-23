@@ -1,24 +1,26 @@
-<script>
+<script lang="ts">
 import { defineComponent } from 'vue'
-import { mapStores, defineStore } from 'pinia'
+import { mapStores, defineStore, mapState } from 'pinia'
 
-const useCounterStore = defineStore('counterStore', {
+const useCounterStore = defineStore('counter', {
   state: () => ({
     counter: 0,
   }),
 })
 
 export default defineComponent({
-  setup() {
-    const counterStore = useCounterStore()
-
-    return { counterStore }
+  computed: {
+    ...mapState(useCounterStore, ['counter']),
   },
 
-  computed: {
-    tripleCounter() {
-      return this.counterStore.counter * 3
+  methods: {
+    debug() {
+      console.log(this)
     },
   },
 })
 </script>
+
+<template>
+  <p @click="debug">Test: {{ counter }} ;</p>
+</template>
