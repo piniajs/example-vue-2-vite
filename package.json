@@ -9,7 +9,7 @@
     "test": "cypress run"
   },
   "dependencies": {
-    "pinia": "^2.2.2",
+    "pinia": "^2.2.4",
     "vue": "^2.7.16"
   },
   "devDependencies": {
