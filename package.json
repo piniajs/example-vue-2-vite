@@ -14,9 +14,9 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue2": "^2.3.4",
-    "cypress": "^15.17.0",
-    "prettier": "^3.8.4",
+    "cypress": "^15.18.0",
+    "prettier": "^3.9.1",
     "typescript": "^6.0.3",
-    "vite": "^7.3.5"
+    "vite": "^7.3.6"
   }
 }
