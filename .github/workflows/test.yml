@@ -11,7 +11,7 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 24.19.0
-      - uses: cypress-io/github-action@v7.4.1
+      - uses: cypress-io/github-action@v7.4.2
         with:
           # env: PORT=4000
           build: yarn run build
